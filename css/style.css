@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    height: 300px;
+    padding: 5px;
+    margin-bottom: 165px;
+}
+img.insta-user{
+    border-radius: 50%;
+    width: 25px;
+    height:25px;
+
+}
+img.insta-user span{
+    margin-left: 10px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
