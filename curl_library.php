@@ -8,7 +8,6 @@ class CurlLibrary {
      * Construct
      *
      * @access public
-     * @param  $base_url
      * @throws \ErrorException
      */
     public function __construct() {
@@ -20,8 +19,13 @@ class CurlLibrary {
 
     /**
      * Set curl options
-     * Execute curl
-     * @return type
+     * Executes curl
+     * Closes curl
+     * @param string $url
+     * @param array $curlHeader
+     * @param array $curlPostFields
+     * @param integer $curlPost
+     * @return array
      */
     function setCurl($url, $curlHeader, $curlPostFields, $curlPost) {
         curl_setopt_array($this->curl, array(
@@ -50,8 +54,8 @@ class CurlLibrary {
 
     /**
      * Gets session id from cookie
-     * @param type $headerInfo
-     * @return type
+     * @param string $headerInfo
+     * @return string
      */
     function getSessionId($headerInfo) {
         $headers = explode(";", $headerInfo);

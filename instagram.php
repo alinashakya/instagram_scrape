@@ -18,7 +18,7 @@ $timelineFeeds = $instaFunction->getInstaContents();
                     ?>
                     <div class="column">
                         <a target="_blank" href="https://www.instagram.com/<?php echo $feed->node->owner->username; ?>" title="<?php echo $feed->node->owner->full_name; ?>"><img class="insta-user" src="<?php echo $feed->node->owner->profile_pic_url; ?>" alt="Avatar"><span><?php echo $feed->node->owner->username; ?></span></a>
-                        <img src="<?php echo $feed->node->display_url; ?>" alt="Snow" style="width:100%">
+                        <img src="<?php echo $feed->node->display_url; ?>" alt="<?php echo $feed->node->owner->username; ?>" style="width: 100%">
                     </div>
                     <?php
                 }
